@@ -3,7 +3,7 @@ An SPA helping to teach users about JavaScript.
 
 Test your JavaScript knowledge at /website TBD/!
   
-# /Code Star/
+# Code Star
 [Joann Saeou](https://github.com/joannsaeou)
 
 [Brendan Mulhern](https://github.com/bmulhern2)
