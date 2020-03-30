@@ -1,4 +1,4 @@
-# js-trivia
+# try/catch
 An SPA helping to teach users about JavaScript.
 
 Test your JavaScript knowledge at /website TBD/!
