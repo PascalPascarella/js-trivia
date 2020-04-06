@@ -30,10 +30,13 @@ submitButton.addEventListener("click", showResults);
 
 //jQuery star rating
 
+/* javascript */
+
 $(function() {
 
-    $("#rateYo").rateYo({
-        rating: 3.6
-    });
+    $("#rateYo").rateYo()
+        .on("rateyo.set", function(e, data) {
 
+            alert("The rating is set to " + data.rating + "!");
+        });
 });

@@ -309,12 +309,15 @@ Description: This is the javascript quiz for the group project.
 
     <script>
         // star rating jQuery
+
+
         $(function() {
 
-            $("#rateYo").rateYo({
-                rating: 3.6
-            });
+            $("#rateYo").rateYo()
+                .on("rateyo.set", function(e, data) {
 
+                    alert("The rating is set to " + data.rating + "!");
+                });
         });
     </script>
 
