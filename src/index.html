@@ -21,6 +21,8 @@ Description: This is the javascript quiz for the group project.
 
     <title>Code Star's JavaScript Trivia</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <!-- Stylesheet - Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
 
@@ -30,9 +32,8 @@ Description: This is the javascript quiz for the group project.
     <!-- knockout's library do not move -->
     <script type='text/javascript' src='/knockout-3.5.1.js'></script>
 
-    <!--jQuery's-->
-
-    <!-- jQuery-->
+    <!--  bootstrap's font sheet-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" <!-- Jquery -->
     <script src="jquery-3.4.1.min.js"></script>
 
     <!--  Google CDN jQuery-->
@@ -41,8 +42,14 @@ Description: This is the javascript quiz for the group project.
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <!--cloudflare CDN jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
 
+    <link rel="stylesheet" href="jquery.rateyo.css" />
 </head>
 ​
 <style>
@@ -59,6 +66,10 @@ Description: This is the javascript quiz for the group project.
     
     body {
         text-align: center;
+    }
+    
+    .checked {
+        color: orange;
     }
 </style>
 ​
@@ -260,27 +271,54 @@ Description: This is the javascript quiz for the group project.
     <div id="results "></div>
 
 
-    <p>Hello, my name is <mark> <span data-bind="text: name "></span></mark>and I am a <span data-bind="text: job "></span></p>
+
+
+
+    <br><br><br>
+    <hr>
+
+
+
+
+
+
+
+    <!-- star rating to give us feedback on our skills-->
+
+    <!-- HTML -->
+
+
+
+    <hr>
+
+
+    <h2>Please give us a rating! </h2>
+    <div id="rateYo">
+
+
+    </div>
+
+
+
+    <!-- do not remove jQuery's file-->
+    <script src="jquery.js"></script>
+
+    <script src="jquery.rateyo.js"></script>
+
 
 
     <script>
-        var viewModel = {
+        // star rating jQuery
+        $(function() {
 
-            name: ko.observable('Joann'),
-            job: ko.observable("web developer ")
+            $("#rateYo").rateYo({
+                rating: 3.6
+            });
 
-
-
-        }
-
-        ko.applyBindings(viewModel);
+        });
     </script>
 
 
-
-
-
-    ​
 </body>
 ​
 

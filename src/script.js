@@ -23,3 +23,17 @@ buildQuiz();
 
 // on submit, show results
 submitButton.addEventListener("click", showResults);
+
+
+
+
+
+//jQuery star rating
+
+$(function() {
+
+    $("#rateYo").rateYo({
+        rating: 3.6
+    });
+
+});

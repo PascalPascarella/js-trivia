@@ -1,22 +1,32 @@
 #quiz {
-  border-color: #99AABB; 6px;
-  border: solid; 10px;
-  background-color: #f7b95c;
- box-shadow: 2px 2px 7px 1px #1C6EA4; 
-  margin: 70px;
-  padding: 15px;
-  text-color: rgb(0.20,0.40,1.00);
-  text-align: center;
+    border-color: #99AABB 6px;
+    border: solid 10px;
+    background-color: #f7b95c;
+    box-shadow: 2px 2px 7px 1px #1C6EA4;
+    margin: 70px;
+    padding: 15px;
+    text-align: center;
 }
 
-h1 {text-align:left;
-  font-size: 30px;
-  text-color: rgb(0.20,0.40,1.00);
-  
+h1 {
+    text-align: left;
+    font-size: 30px;
 }
 
-#submit {float:right; auto;
-  
+#submit {
+    float: right auto;
 }
 
+body {
+    background: linear-gradient(245deg, rgba(27, 27, 27, 0.04) 0%, rgba(27, 27, 27, 0.04) 93%, rgba(92, 92, 92, 0.04) 93%, rgba(92, 92, 92, 0.04) 100%), linear-gradient(44deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 39%, rgba(186, 186, 186, 0.04) 39%, rgba(186, 186, 186, 0.04) 100%), linear-gradient(134deg, rgba(178, 178, 178, 0.04) 0%, rgba(178, 178, 178, 0.04) 95%, rgba(237, 237, 237, 0.04) 95%, rgba(237, 237, 237, 0.04) 100%), linear-gradient(322deg, rgba(56, 56, 56, 0.04) 0%, rgba(56, 56, 56, 0.04) 58%, rgba(232, 232, 232, 0.04) 58%, rgba(232, 232, 232, 0.04) 100%), linear-gradient(139deg, rgba(51, 51, 51, 0.04) 0%, rgba(51, 51, 51, 0.04) 62%, rgba(35, 35, 35, 0.04) 62%, rgba(35, 35, 35, 0.04) 100%), linear-gradient(252deg, rgba(9, 9, 9, 0.04) 0%, rgba(9, 9, 9, 0.04) 39%, rgba(174, 174, 174, 0.04) 39%, rgba(174, 174, 174, 0.04) 100%), linear-gradient(229deg, rgba(241, 241, 241, 0.04) 0%, rgba(241, 241, 241, 0.04) 2%, rgba(140, 140, 140, 0.04) 2%, rgba(140, 140, 140, 0.04) 100%), linear-gradient(223deg, rgba(82, 82, 82, 0.04) 0%, rgba(82, 82, 82, 0.04) 36%, rgba(229, 229, 229, 0.04) 36%, rgba(229, 229, 229, 0.04) 100%), linear-gradient(90deg, rgb(245, 16, 17), rgb(177, 69, 207))
+}
 
+#carbonads a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans';
+}
+
+#carbonads a:hover {
+    color: #fff
+}
