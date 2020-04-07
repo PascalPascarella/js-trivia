@@ -113,26 +113,26 @@ ko.components.register("quizcomponent", {
                          <div class="question-set">\
 							 <!-- ko if: trueFalse(a1()) -->\
 							 <div class="question-answer-wrapper">\
-								 <input data-bind="checkedValue: a1, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
-								 <label data-bind="text: a1" >self is an answer</label>\
+								 <input id="a1" data-bind="checkedValue: a1, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
+								 <label for="a1" data-bind="text: a1" >self is an answer</label>\
 							 </div>\
 							 <!-- /ko -->\
 							 <!-- ko if: trueFalse(a2()) -->\
 							 <div  class="question-answer-wrapper">\
-								 <input data-bind="checkedValue: a2, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
-								 <label data-bind="text: a2">self is an answer</label>\
+								 <input id="a2" data-bind="checkedValue: a2, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
+								 <label for="a2" data-bind="text: a2">self is an answer</label>\
 							 </div>\
 							 <!-- /ko -->\
 							 <!-- ko if: trueFalse(a3()) -->\
 							 <div  class="question-answer-wrapper">\
-								 <input data-bind="checkedValue: a3, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
-								 <label data-bind="text: a3">self is an answer</label>\
+								 <input id="a3" data-bind="checkedValue: a3, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
+								 <label for="a3" data-bind="text: a3">self is an answer</label>\
 							 </div>\
 							 <!-- /ko -->\
 							 <!-- ko if: trueFalse(a4()) -->\
 							 <div class="question-answer-wrapper">\
-								 <input data-bind="checkedValue: a4, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
-								 <label data-bind="text: a4">self is an answer</label>\
+								 <input id="a4" data-bind="checkedValue: a4, checked: selected, click: clicked" type="radio" class="question-radio-button" name="option">\
+								 <label for="a4" data-bind="text: a4">self is an answer</label>\
 							 </div>\
 							 <!-- /ko -->\
 						 </div>\
