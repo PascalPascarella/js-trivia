@@ -1,74 +1,73 @@
 <!-- 
-    Author: Code Star
-    Date: April 2020 
+	Author: Code Star
+	Date: April 2020
+	Description: Unifies all elements and displays
+			active components in the user's browser.
 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="description" content="JavaScript Quiz">
-    
-    <!-- Application Styles -->
-    <link href="styles/settings-modal-styles.css"  rel="stylesheet" >
-    <link href="styles/question-styles.css"        rel="stylesheet" >
-    <link href='styles/home-styles.css'            rel="stylesheet" >
-    <link href='styles/global-styles.css'          rel="stylesheet" >
-    <link href="styles/results-styles.css"         rel="stylesheet" >
-    <link href="styles/navbar-styles.css"          rel="stylesheet" >
-    <link href="styles/quizzes-styles.css"         rel="stylesheet" >
-    <link href="styles/resources-styles.css"       rel="stylesheet" >
-    <link href="styles/about-styles.css"           rel="stylesheet" >
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto"         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline"  rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech"     rel="stylesheet">
+	<!-- Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="description" content="JavaScript Quiz">
 
-    
-    <title>JS-Trivia</title>
+	<!-- Application Styles -->
+	<link href="styles/settings-modal-styles.css"		rel="stylesheet" >
+	<link href="styles/question-styles.css"					rel="stylesheet" >
+	<link href="styles/home-styles.css"							rel="stylesheet" >
+	<link href="styles/global-styles.css"						rel="stylesheet" >
+	<link href="styles/results-styles.css"					rel="stylesheet" >
+	<link href="styles/navbar-styles.css"						rel="stylesheet" >
+	<link href="styles/quizzes-styles.css"					rel="stylesheet" >
+	<link href="styles/resources-styles.css"				rel="stylesheet" >
+	<link href="styles/about-styles.css"						rel="stylesheet" >
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto"					rel="stylesheet" >
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline"	rel="stylesheet" >
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech"			rel="stylesheet" >
+		
+	<title>JS-Trivia</title>
 </head>
 
+
 <body>
-    <!-- NavBar -->
-    <navbarcomponent></navbarcomponent>
+	<!-- NavBar -->
+	<navbarcomponent></navbarcomponent>
 
-    <!-- Active Component -->
-    <div data-bind="component: activeComponent"></div>
+	<!-- Active Component -->
+	<div data-bind="component: activeComponent"></div>
 
-    <!-- Script Loading -->
-       
-        <!-- Dependencies -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="scripts/jquery-cookie.js"></script> 
-        <script src="scripts/knockout-3.5.1.js"></script>
-        <script src="scripts/knockout-mapping.js"></script>
-        <script src="scripts/knockout-postbox.js"></script>
-        <script src="questions/question-bank.js"></script> 
-        <script src="scripts/js-trivia.js"></script>    
-        
-        <!-- Component Loading -->
-        <script src="components/navbar-component.js"></script>
-        <script src="components/home-component.js"></script>
-        <script src="components/quiz-component.js"></script>
-        <script src="components/quizzes-component.js"></script>
-        <script src="components/resources-component.js"></script>
-        <script src="components/results-component.js"></script>
-        <script src="components/about-component.js"></script>
+	<!-- Script Loading -->
+		<!-- Dependencies -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="scripts/jquery-cookie.js"></script>
+		<script src="scripts/knockout-3.5.1.js"></script>
+		<script src="scripts/knockout-mapping.js"></script>
+		<script src="scripts/knockout-postbox.js"></script>
+		<script src="questions/question-bank.js"></script>
+		<script src="scripts/js-trivia.js"></script>
 
-        <!-- app.js -->
-        <script src="scripts/app.js"></script> 
-        
-        <!-- Button Bindings + Navigation-->
-        <script src="scripts/button-bindings.js"></script>
-        <script src="scripts/navigate.js"></script>
+		<!-- Component Loading -->
+		<script src="components/navbar-component.js"></script>
+		<script src="components/home-component.js"></script>
+		<script src="components/quiz-component.js"></script>
+		<script src="components/quizzes-component.js"></script>
+		<script src="components/resources-component.js"></script>
+		<script src="components/results-component.js"></script>
+		<script src="components/about-component.js"></script>
 
-        <!-- Settings Modal Script -->
-        <script src="scripts/settings-modal.js"></script>
-        
+		<!-- app.js -->
+		<script src="scripts/app.js"></script>
+
+		<!-- Button Bindings + Navigation-->
+		<script src="scripts/button-bindings.js"></script>
+		<script src="scripts/navigate.js"></script>
+
+		<!-- Settings Modal Script -->
+		<script src="scripts/settings-modal.js"></script>
 
 </body>
-
 </html>
