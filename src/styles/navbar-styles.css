@@ -13,8 +13,10 @@
 	font-size: 35px !important;
 	color: rgb(200, 200, 200);
 	background-color: black !important;
-	min-width: 160px;
+	min-width: 150px;
 	max-height: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .navbar > div {
 	color: white;
@@ -22,10 +24,10 @@
 	line-height: 70px;
 	font-size: 18px;
 	font-family: "Share Tech", sans-serif;
-	min-width: 128px;
+	min-width: fit-content;
 }
 .left-option:hover {
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .navbar-actionButton {
 	color: white;
