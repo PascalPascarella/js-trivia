@@ -1,0 +1,53 @@
+.quizzes-title{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	right: 0px;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	margin-top: 40px;
+	height: 100px;
+	color: white;
+	line-height: 100px;
+	font-size: 60px;
+	font-family: "Share Tech", sans-serif;
+}
+.quizzes-backdrop{
+	width: 60%;
+	height: 350px;
+	position: absolute;
+	top: 160px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	border: 5px solid white;
+	background: linear-gradient(40deg, rgba(4, 29, 168, 0.7), rgba(174, 112, 112, 0.7));
+}
+.quizzes-item-container{
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	top: 260px;
+	height: 90px;
+	border-bottom: 3px dashed white;
+}
+.quizzes-item-header{
+	position: absolute;
+	left: 30px;
+	top: 10%;
+	font-family: "Share Tech", sans-serif;
+	color: white;
+}
+.quizzes-item-button{
+	position: absolute;
+	right: 30px;
+	top: 24%;
+	padding: 10px;
+	border: 2px solid white;
+	color: white;
+	border-radius: 10px;
+	font-family: "Share Tech", sans-serif;
+}
