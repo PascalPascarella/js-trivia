@@ -5,249 +5,124 @@ Date: 8 March 2020
 Modified By: Brendan Mulhern, Pascal Pascarella, Joann Saeou, Jeff Lindel
 Description: This is the javascript quiz for the group project.
 ---->
-<!DOCTYPE html>
 <html>
-​
-<head>
-  <title>Javascript Trivia Quiz</title>
-​
-</head>
-​
-<style>
-* {
-  margin: 0px;
-  padding: 0px;
-}
-nav {
-  text-align: center;
-  background-color: lightblue;
-  color: black;
-} body {
-  text-align: center;
-}
-</style>
-​
-<body>
-<nav>
-<h1>JavaScript Quiz</h1>
-</nav>
-  <!-- card 1-->
-  <div id="quiz-1">
-    <h1> Q1</h1>
-    <p class="quiz-question"> These are the keywords for declaring variables in JavaScript:</p>
-    <label for="Q1">Select the correct answer:</label>
-​
-    <select id="Q1">
-      <option value="a1">What are variable, new, and create?</option>
-      <option value="a2">What are var, let, and const?</option>
-      <option value="a3">what are object, array, number, and string?</option>
-      <option value="a4">What are number, boolean, string, and object?</option>
-    </select>
-    <!-- card 1 end -->
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 1-->
-  <hr>
-​
-  <!-- card 2 -->
-  <div id="quiz-2">
-    <h1> Q2</h1>
-    <p class="quiz-question">DOM stands for this:</p>
-    <label for="Q2">Select the correct answer:</label>
-​
-    <select id="Q2">
-      <option value="a1">What is Deliverable Opinion Material?</option>
-      <option value="a2">What is Deleted Object Meaning?</option>
-      <option value="a3">What is Document Object Model?</option>
-      <option value="a4">What is Dedicated Online Material?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 2 -->
-  <hr>
-  <!-- card 3 -->
-  <div id="quiz-3">
-    <h1> Q3</h1>
-    <p id="quiz-question">This syntax ['Elephants', 'Dogs', 'People'] represents what in Javascript?</p>
-    <label for="Q3">Select the correct answer:</label>
-​
-    <select id="Q3">
-      <option value="a1">What is a function?</option>
-      <option value="a2">What is a for loop?</option>
-      <option value="a3">What is an if/else statement?</option>
-      <option value="a4">What is an array?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 3 -->
-  <hr>
-  <!-- card 4 -->
-  <div id="quiz-4">
-    <h1> Q4</h1>
-    <p id="quiz-question">This symbol is shorthand for jQuery:</p>
-    <label for="Q4">Select the correct answer:</label>
-​
-    <select id="Q4">
-      <option value="a1">What is $ ?</option>
-      <option value="a2">What is ! ?</option>
-      <option value="a3">What is @ ?</option>
-      <option value="a4">What is & ?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 4 -->
-  <hr>
-  <!-- card 5 -->
-  <div id="quiz-5">
-    <h1> Q5</h1>
-    <p id="quiz-question">These symbols denote an object in JavaScript:</p>
-    <label for="Q5">Select the correct answer:</label>
-​
-    <select id="Q5">
-      <option value="a1">What are < and > ?</option>
-      <option value="a2">What are ( and ) ?</option>
-      <option value="a3">What are { and } ?</option>
-      <option value="a4">What are " and  " ?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 5 -->
-  <hr>
-  <!-- card 6 -->
-  <div id="quiz-6">
-    <h1> Q6</h1>
-    <p id="quiz-question">Primitive data types:</p>
-    <label for="Q6">Select the correct answer:</label>
-​
-    <select id="Q6">
-      <option value="a1">What are boolean, null, undefined, number, string, and symbol?</option>
-      <option value="a2">What are int, float, decimal, string, null, and undefined?</option>
-      <option value="a3">What are object, function, array, Math, RegExp, and error?</option>
-      <option value="a4">What are NaN, number, null, string, and boolean?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 6 -->
-  <hr>
-  <!-- card 7 -->
-  <div id="quiz-7">
-    <h1> Q7</h1>
-    <p id="quiz-question">The last element of an array:</p>
-    <label for="Q7">Select the correct answer:</label>
-​
-    <select id="Q7">
-      <option value="a1">What is array[0]?</option>
-      <option value="a2">What is array[last]?</option>
-      <option value="a3">What is array[array.length - 1]?</option>
-      <option value="a4">What is array[null]?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 7 -->
-  <hr>
-  <!-- card 8 -->
-  <div id="quiz-8">
-    <h1> Q8</h1>
-    <p id="quiz-question">Control statement:</p>
-    <label for="Q8">Select the correct answer:</label>
-​
-    <select id="Q8">
-      <option value="a1">What is new?</option>
-      <option value="a2">What is var?</option>
-      <option value="a3">What is null?</option>
-      <option value="a4">What is if?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 8 -->
-  <hr>
-  <!-- card 9 -->
-  <div id="quiz-9">
-    <h1> Q9</h1>
-    <p id="quiz-question">Used for client side debugging:</p>
-    <label for="Q9">Select the correct answer:</label>
-​
-    <select id="Q9">
-      <option value="a1">What is video conferencing?</option>
-      <option value="a2">What is randomly mashing buttons?</option>
-      <option value="a3">What are browser developer tools?</option>
-      <option value="a4">What is turning it off and on again?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 9 -->
-  <hr>
-  <!-- card 10 -->
-  <div id="quiz-10">
-    <h1> Q10</h1>
-    <p id="quiz-question">Used to insert JavaScript into HTML, either inline or as an external file:</p>
-    <label for="Q10">Select the correct answer:</label>
-​
-    <select id="Q10">
-      <option value="a1">What is the &lt java &gt tag?</option>
-      <option value="a2">What is the &lt script &gt tag?</option>
-      <option value="a3">What is the &lt code &gt tag?</option>
-      <option value="a4">What is the &lt link &gt tag?</option>
-    </select>
-​
-    <div class="submit">
-      <input type="image" src="https://i.postimg.cc/Xqfbqkc6/check-mark.png width=" 50px" height="50px" align="right"
-        alt="Submit">
-    </div>
-​
-  </div>
-  <!-- end of card 10 -->
-​
-  <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-      href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-​
-  <div id="results"></div>
-​
-</body>
-​
-</html>
+    <head>
+        <title>Javascript Quiz</title>
+        <style>
+            nav {
+                margin-top: -6vh;
+            } div {
+                margin-top: -2.2vh;
+            }
+        </style>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
+     ​   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
+    </head>
+    <body>
+        <nav class="text-center bg-dark text-light">
+            <h1>Javascript Quiz</h1>
+        </nav>
+        <div class="text-center text-light bg-primary" data-bind="foreach: Questions">
+        <p class="bg-dark float-left" data-bind="text: number"><p data-bind="text: question"></p></p>
+        <label>Select The Correct Answer</label>
+        <select>
+            <option data-bind="text: a1"></option>
+            <option data-bind="text: a2"></option>
+            <option data-bind="text: a3"></option>
+            <option data-bind="text: a4"></option>
+        </select>
+        <hr>
+        <br>
+        </div>
+        <div id="button" class="bg-priamry text-light text-center">
+        <button class="text-center bg-success text-light" type="submit" onclick="submit();">Submit Quiz</button>
+        </div>
+        <script>
+        var Questions = [
+            {
+             number: 1,
+             question: "These are the keywords for declaring variables in Javascript",
+             a1: "What are variable, new and create?",
+             a2: "What are var, let and const?",
+             a3: "What are object, array, number, and string?",
+             a4: "What are number, boolean, string and object?",
+            },
+            {
+             number: 2,
+             question: "DOM stands for this",
+             a1: "What is Deleverable Opinion Material?",
+             a2: "What is Deleted Object Meaning?",
+             a3: "What is Document Object Model?",
+             a4: "What is Dedicared Online Material?"
+            },
+            {
+             number: 3,
+             question: "This syntax ['Elephants', 'Dogs', 'People'] represents what in Javascript?",
+             a1: "What is a function?",
+             a2: "What is a for loop?",
+             a3: "What is an if/else statement?",
+             a4: "What is an array?"
+            },
+            {
+             number: 4,
+             question: "This symbol is shorthand for jQuery?",
+             a1: "What is $ ?",
+             a2: "What is ! ?",
+             a3: "What is @ ?",
+             a4: "What is & ?"
+            },
+            {
+             number: 5,
+             question: "These symbols denote an object in JavaScript:",
+             a1: "What are < and > ?",
+             a2: "What ( and ) ?",
+             a3: "What { and } ?",
+             a4: "What \" and \" ?"
+            },
+            {
+             number: 6,
+             question: "Primative data types:",
+             a1: "What are boolean, null, undefined, number, string and symbol?",
+             a2: "What are int, float, decimal, string, null, and undefined?",
+             a3: "What are object, function, array, Math, RegExp, and error?",
+             a4: "What are NaN, number, null, string, and boolean?"
+            },
+            {
+             number: 7,
+             question: "The last element of an array:",
+             a1: "What is array[0]?",
+             a2: "What are int, float, decimal, string, null, and undefined?",
+             a3: "What is array[last]?",
+             a4: "What is array[null]?"
+            },
+            {
+             number: 8,
+             question: "Control statement:",
+             a1: "What is new?",
+             a2: "What is var?",
+             a3: "What is null?",
+             a4: "What is if?"
+            },
+            {
+             number: 9,
+             question: "Used for client side debugging:",
+             a1: "What is video conferencing?",
+             a2: "What is randonly mashing buttons?",
+             a3: "What are browser developer tools?",
+             a4: "What is turning it off and on again?"
+            },
+            {
+             number: 10,
+             question: "Used to insert JavaScript into HTML, either inline or as an external file:",
+             a1: "What is the &lt java &gt tag?",
+             a2: "What is the &lt script &gt tag?",
+             a3: "What is the &lt code &gt tag?",
+             a4: "What is the &lt link &gt tag?"
+            }
+        ]
+        ko.applyBindings(Questions);
+        </script>
+    </body>
+</html>c
