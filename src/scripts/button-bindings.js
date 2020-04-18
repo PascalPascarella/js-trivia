@@ -1,11 +1,11 @@
-/* 
+/*
 ============================================================
  Author: Code Star
  Date: April 2020
  Description: The button-bindings file is responsible
  		for assigning click events to buttons using jQuery's
  		.on() method. Then the respective code is run after each
- 		press. 
+ 		press.
 ===========================================================
 */
 $(document).ready(function() {
@@ -52,11 +52,13 @@ $(document).ready(function() {
 	  ---------- Quiz Component Bindings ----------
 	*/
 		$(document.body).on("click", ".question-next-button", function() {
-			console.log('clicked');
+      console.log('clicked');
+      $(".question-header").flip();
 			ViewModel.progress();
 		});
 		$(document.body).on("click", ".question-back-button", function() {
-			console.log('clicked');
+      console.log('clicked');
+      $().flip();
 			ViewModel.regress();
 		});
 	/*
