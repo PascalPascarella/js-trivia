@@ -43,6 +43,14 @@ Description: This is the javascript quiz for the group project.
     <!--cloudflare CDN jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+    <!-- star rating jQuery's plugin stylesheet-->
+    <link rel="stylesheet" href="jquery.rateyo.css" />
+
 
 
 
@@ -276,33 +284,21 @@ Description: This is the javascript quiz for the group project.
 
 
 
-
-
-
-
     <!-- star rating to give us feedback on our skills-->
+    <!-- HTML -->
 
-    <h3 data-bind="text: question"></h3>
-    <p>Please give us a feedback by clicking on the star from 5 to greatest 1 to lowest </p>
+    <div role="sub" class="container">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Coding Skills</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: answers">
-            <tr>
-                <td data-bind="text: answerText"></td>
-                <td data-bind="starRating: points"></td>
-            </tr>
-        </tbody>
-    </table>
+        <h1>
+            <p>Please give us a rating by clicking on the stars </h1>
 
-    <h3 data-bind="fadeVisible: pointsUsed() > pointsBudget">You've used too many points! Please remove some.</h3>
-    <p>You've got <b data-bind="text: pointsBudget - pointsUsed()"></b> points left to use.</p>
-    <button data-bind="jqButton: { enable: pointsUsed() <= pointsBudget }, click: save">Finished</button>
+
+
+        <div id="rateYo">
+
+        </div>
+
+    </div>
 
 
 
@@ -313,99 +309,45 @@ Description: This is the javascript quiz for the group project.
 
 
 
-    <script type="text/javascript" src="../../../knockout-3.5.1.js">
+    <script src="jquery.js"></script>
+    <script src="jquery.rateyo.js"></script>
+    <script type="text/javascript" src="../knockout-3-5-1.js">
     </script>
     <script>
-        //knockout binding for star rating 
+        /* Javascript */
 
-        ko.bindingHandlers.fadeVisible = {
-            init: function(element, valueAccessor) {
-                // Start visible/invisible according to initial value
-                var shouldDisplay = valueAccessor();
-                $(element).toggle(shouldDisplay);
-            },
-            update: function(element, valueAccessor) {
-                // On update, fade in/out
-                var shouldDisplay = valueAccessor();
-                shouldDisplay ? $(element).fadeIn() : $(element).fadeOut();
-            }
-        };
+        $(function() {
 
-        ko.bindingHandlers.jqButton = {
-            init: function(element) {
-                $(element).button(); // Turns the element into a jQuery UI button
-            },
-            update: function(element, valueAccessor) {
-                var currentValue = valueAccessor();
-                // Here we just update the "disabled" state, but you could update other properties too
-                $(element).button("option", "disabled", currentValue.enable === false);
-            }
-        };
+            $("#rateYo").rateYo({
 
-        ko.bindingHandlers.starRating = {
-            init: function(element, valueAccessor) {
-                $(element).addClass("starRating");
-                for (var i = 0; i < 5; i++)
-                    $("<span>").appendTo(element);
+                onSet: function(rating, rateYoInstance) {
 
-                // Handle mouse events on the stars
-                $("span", element).each(function(index) {
-                    $(this).hover(
-                        function() {
-                            $(this).prevAll().add(this).addClass("hoverChosen")
-                        },
-                        function() {
-                            $(this).prevAll().add(this).removeClass("hoverChosen")
-                        }
-                    ).click(function() {
-                        var observable = valueAccessor(); // Get the associated observable
-                        observable(index + 1); // Write the new rating to it
-                    });
-                });
-            },
-            update: function(element, valueAccessor) {
-                // Give the first x stars the "chosen" class, where x <= rating
-                var observable = valueAccessor();
-                $("span", element).each(function(index) {
-                    $(this).toggleClass("chosen", index < observable());
-                });
-            }
-        };
+                    alert("Rating is set to: " + rating);
+                },
 
-        // ----------------------------------------------------------------------------
-        // Page viewmodel
+                maxValue: 5,
+                numStars: 5,
+                starWidth: "50px"
 
-        function Answer(text) {
-            this.answerText = text;
-            this.points = ko.observable(1);
-        }
 
-        function SurveyViewModel(question, pointsBudget, answers) {
-            this.question = question;
-            this.pointsBudget = pointsBudget;
-            this.answers = $.map(answers, function(text) {
-                return new Answer(text)
             });
-            this.save = function() {
-                alert('To do')
-            };
+        });
 
-            this.pointsUsed = ko.computed(function() {
-                var total = 0;
-                for (var i = 0; i < this.answers.length; i++)
-                    total += this.answers[i].points();
-                return total;
-            }, this);
-        }
+        // Getter
+        var maxValue = $("#rateYo").rateYo("option", "maxValue"); //returns 5 stars
 
-        ko.applyBindings(new SurveyViewModel("How is our web development skills?", 10, [
-            "JavaScript Functionality",
-            "HTML Improvement",
-            "CSS Styling",
-            "jQuery, Knockout, EJS"
-        ]));
+        // Setter
+        $("#rateYo").rateYo("option", "maxValue", 5); //returns a jQuery Element
+
+        // Getter
+        var onSet = $("#rateYo").rateYo("option", "onSet"); //returns the function
+
+        // Setter
+        $("#rateYo").rateYo("option", "onSet", function() {
+
+            console.log("This is a new function");
+        }); //returns a jQuery Element
     </script>
-
 
 </body>
 ​
