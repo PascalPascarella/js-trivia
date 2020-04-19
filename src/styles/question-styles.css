@@ -1,0 +1,45 @@
+label{
+	margin-left: 30px;
+	display: block;
+}
+input[type=radio] {
+	float: left;
+}
+.question-header{
+	background-color: rgb(12, 12, 12);
+	color: white;
+	padding: 30px;
+}
+.question-header-text, .question-text{
+	display: inline-block;
+}
+.question-set{
+	padding: 25px;
+	min-height: 200px;
+	margin: 15px;
+}
+.question-answer-wrapper{
+	padding: 15px;
+}
+.question-button-set{
+	position: absolute;
+	right: 15px;
+	bottom: 18px;
+}
+.question-back-button, .question-next-button{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 15px;
+	color: white;
+	background-color: rgb(12, 12, 12);
+}
+.question-counter{
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+}
+.question-back-button:active, .question-next-button:active{
+	color: black !important;
+	background-color: white !important;
+	border: 1px solid black;
+} 
