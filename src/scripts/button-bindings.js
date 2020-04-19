@@ -10,18 +10,6 @@
 */
 $(document).ready(function() {
 	/*
-	 ---------- Settings Modal Bindings ----------
-	*/
-		$(document.body).on("click", "#settingsTrigger", function() {
-			settingsModal.initialize(settings);
-		});
-		$(document.body).on("click", ".settings-close", function() {
-			settingsModal.destroy();
-		});
-		$(document.body).on("click", ".settings-save", function() {
-			saveSettings(settings, $("#settings-form"));
-		});
-	/*
 	 ---------- NAVBAR Bindings ----------
 	*/
 		$(document.body).on("click", ".navbar-home", function() {
@@ -53,12 +41,10 @@ $(document).ready(function() {
 	*/
 		$(document.body).on("click", ".question-next-button", function() {
       console.log('clicked');
-      $(".question-header").flip();
 			ViewModel.progress();
 		});
 		$(document.body).on("click", ".question-back-button", function() {
       console.log('clicked');
-      $().flip();
 			ViewModel.regress();
 		});
 	/*

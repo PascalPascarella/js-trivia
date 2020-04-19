@@ -40,14 +40,9 @@ ko.components.register("navbarcomponent", {
 		<div class="navbar-home left-option unselectable">HOME</div>\
 		<div class="navbar-quizzes left-option unselectable">QUIZZES</div>\
 		<div class="navbar-resources left-option unselectable">JS RESOURCES</div>\
-		<div class="navbar-results left-option unselectable">RESULTS (debug)</div>\
 		<div class="navbar-about left-option unselectable">ABOUT US</div>\
 		<!-- ko if: initialized -->\
 		<div data-bind="text: actionButtonText, style: {color: actionButtonColor}" class="navbar-actionButton left-option unselectable actionButton">Test</div>\
 		<!-- /ko -->\
-		<div class="navbar-settings">\
-			<img role="button" draggable="false" ondragstart="return false;" aria-label="settings" \
-				id="settingsTrigger" alt="Settings Icon" class="settings-icon" src="media/images/settings.svg" />\
-		</div>\
 	</div>'
 });

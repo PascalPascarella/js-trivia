@@ -103,15 +103,6 @@ var JsTriva = function() {
 	}
 
 	/*
-	 * Saves the settings from settings-modal.js to cookies.
-	*/
-	function saveCookies(scrambleAnswers, scrambleQuestions) {
-		$.cookie("scrambleAnswers", scrambleAnswers, { expires: 7 });
-		$.cookie("scrambleQuestions", scrambleQuestions, { expires: 7 });
-		console.log("Cookies Saved!");
-	}
-
-	/*
 	 * The setup function call (builds protoTestObject).
 	*/
 	return {

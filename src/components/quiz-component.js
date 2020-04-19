@@ -89,7 +89,7 @@ ko.components.register("quizcomponent", {
  '<div class="wrapper">\
  		<div class="question-main">\
 			<div class="question-box">\
-				<div class="card">\
+				<div class="card" id="card">\
 					<input type="checkbox" id="card1" class="more" aria-hidden="true">\
 						<div class="content">\
 							<div class="front">\
