@@ -1,7 +1,7 @@
 # try/catch
 An SPA helping to teach users about JavaScript.
 
-Test your JavaScript knowledge at https://raw.githack.com/PascalPascarella/js-trivia/master/src/index.html !
+Test your JavaScript knowledge at [here](https://bit.ly/3cA1NFP)!
   
 # Code Star
 [Joann Saeou](https://github.com/joannsaeou)
